@@ -1,12 +1,13 @@
 /* General */
 :root {
-	--pink: #ff08d6;
 	--pink: #c20098;
 	--purple: #9200b3;
 }
+html {
+	scroll-behavior: smooth;
+}
 body {
 	font-family: 'Geometria', apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	
 }
 section {
 	padding-top: 4rem;
@@ -87,6 +88,12 @@ textarea:focus:-ms-input-placeholder {
 }
 .btn-purple {
 	background-color: var(--purple);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.btn-purple:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 }
 /* End General */
 
@@ -543,6 +550,16 @@ textarea:focus:-ms-input-placeholder {
 	font-weight: 400;
 	font-size: 1rem;
 	margin-bottom: 30px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
 }
 .instructors-item img {
 	border-radius: 50%;
@@ -565,6 +582,12 @@ textarea:focus:-ms-input-placeholder {
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 0.5rem;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.instructors-item .vk:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.1);
 }
 .instructors-item .tel {
 	font-weight: 600;
@@ -587,9 +610,198 @@ textarea:focus:-ms-input-placeholder {
 
 /* Media Instructors */
 @media (min-width: 992px) and (max-width: 1199px) {
+	.instructors-item {
+		font-size: 0.8rem;
+	}
+	.instructors-item .contacts {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	}
+	.instructors-item .vk {
+		margin-right: 0;
+		position: relative;
+		top: -10px;
+	}
 	.instructors-item .btn {
-		padding-top: 0.7rem;
-		padding-bottom: 0.7rem;
+		font-size: 0.8rem;
+	}
+}
+@media (max-width: 991px) {
+	.instructors-item img {
+		margin-bottom: 1rem;
+	} 
+}
+@media (max-width: 575px) {
+	.instructors-item {
+		font-size: 0.8rem;
+	}
+	.instructors-item .contacts {
+		margin-bottom: 1rem;
 	}
 }
 /* End Media Instructors */
+
+/* Map */
+.map {
+	position: relative;
+	padding: 0;
+}
+.map .wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 5rem;
+	padding-bottom: 2rem;
+	z-index: 2;
+	pointer-events: none;
+}
+.map .box {
+	padding: 3rem;
+	background-color: #fff;
+	font-size: 1.125rem;
+	pointer-events: auto;
+}
+.map h2 {
+	text-transform: none;
+	letter-spacing: 0;
+	font-size: 1.75rem;
+	margin-bottom: 2.5rem;
+}
+.map .tel {
+	font-weight: 500;
+	margin-top: 1.5rem;
+	margin-bottom: 4rem;
+}
+.map .social-icon {
+	display: inline-block;
+	margin-right: 0.5rem;
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.map .social-icon:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+} 
+.map .social-icon-vk {
+	background-image: url(../img/vk.svg);
+}
+.map .social-icon-yt {
+	background-image: url(../img/youtube.svg);
+}
+.map .social-icon-inst {
+	background-image: url(../img/instagram.svg);
+	background-size: 80%;
+}
+.map .social-icon-tg {
+	background-image: url(../img/telegram.svg);
+	background-size: 90%;
+}
+/* End Map */
+
+/* Media Map */
+@media (max-width: 991px) {
+	.map .wrapper {
+		position: relative;
+		padding-top: 3rem;
+	}
+	.map .box {
+		padding: 0;
+	}
+	.map .tel {
+		margin-bottom: 3rem;
+	}
+}
+/* End Media Map */
+
+/* Rollerclub */
+.rollerclub {
+	font-size: 1.25rem;
+}
+.rollerclub b {
+	font-weight: 800;
+}
+.rollerclub a {
+	color: var(--purple);
+	border-bottom: 2px solid var(--purple);
+	text-decoration: none;
+}
+/* End Rollerclub */
+
+/* Media Rollerclub */
+@media (max-width: 1199px) {
+	.rollerclub {
+		font-size: 1.15rem;
+	}
+}
+@media (max-width: 767px) {
+	.rollerclub {
+		font-size: 1rem;
+	}
+}
+/* End Media Rollerclub */
+
+/* Enroll */
+.enroll {
+	font-size: 1.25rem;
+}
+.enroll b {
+	font-weight: 800;
+}
+.enroll form input {
+	border-bottom: 1px solid var(--purple);
+	margin-bottom: 2rem;
+}
+.enroll form .btn {
+	margin-top: 2rem;
+}
+/* End Enroll */
+
+/* Media Enroll */
+@media (max-width: 1199px) {
+	.enroll {
+		font-size: 1.15rem;
+	}
+}
+@media (max-width: 767px) {
+	.enroll {
+		font-size: 1rem;
+	}
+}
+@media (max-width: 575px) {
+	.enroll form {
+		margin-top: 2rem;
+	}
+	.enroll form .btn {
+		margin-top: 1rem;
+	}
+}
+/* End Media Enroll */
+
+/* Footer */
+.footer {
+	font-weight: 800;
+	font-size: 0.9rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.footer a {
+	color: inherit;
+	text-decoration: none;
+}
+.footer a:hover {
+	color: var(--purple);
+}
+.footer .footer-nav-link {
+	display: inline-block;
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+/* End Footer */
