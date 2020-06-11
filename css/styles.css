@@ -2,12 +2,16 @@
 :root {
 	--pink: #c20098;
 	--purple: #9200b3;
+	--dark-purple: #510163;
 }
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 body {
 	font-family: 'Geometria', apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	position: relative;
+	min-height: 100vh;
 }
 section {
 	padding-top: 4rem;
@@ -253,7 +257,7 @@ textarea:focus:-ms-input-placeholder {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-.main-screen .personal-data {
+/*.main-screen .personal-data {*/
 	font-size: 0.9rem;
 	color: rgba(255, 255, 255, 0.7); 
 }
@@ -791,6 +795,10 @@ textarea:focus:-ms-input-placeholder {
 	font-size: 0.9rem;
 	padding-top: 2rem;
 	padding-bottom: 2rem;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 .footer a {
 	color: inherit;
@@ -805,3 +813,86 @@ textarea:focus:-ms-input-placeholder {
 	padding-right: 0.5rem;
 }
 /* End Footer */
+
+/* Choice */
+.choice {
+	padding-bottom: 5rem;
+	font-size: 1.3rem;
+}
+.choice .lead {
+	font-size: 1.5rem;
+}
+.choice header {
+	background-image: 
+		-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5))),
+		url(../img/article-pic-13.jpg);
+	background-image: 
+		linear-gradient(rgba(0,0,0,0.5)),
+		url(../img/article-pic-13.jpg);
+	background-position: bottom;
+	background-size: cover;background-repeat: no-repeat;
+	padding-top: 15rem;
+	padding-bottom: 15rem;
+	color: #fff;
+}
+.choice h1 {
+	font-size: 3.2rem;
+}
+.choice h2 {
+	font-size: 2.4rem;
+	margin-bottom: 3rem;
+}
+.choice h3 {
+	margin-top: 4rem;
+	margin-bottom: 2rem;
+}
+.choice ol {
+	counter-reset: section;   
+	list-style-type: none;
+	padding-left: 0;
+}
+.choice ol li {
+	margin-bottom: 2rem;
+	position: relative;
+	padding-left: 35px;
+	padding-left: 40px;
+}
+.choice ol li:before {
+	counter-increment: section;
+	content: counter(section);
+	position: absolute;
+	display: block;
+	float: left;
+	color: #fff;
+	background-color: var(--dark-purple);
+	border-radius: 50%;
+	font-weight: 800;
+	line-height: 30px;
+	left: 0;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+}
+.choice .sidenote {
+	color: #555;
+	font-family: 'Caveat', cursive;
+}
+.choice blockquote {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: 40px;
+	padding-right: 20px;
+	border-right: 2px solid var(--dark-purple);
+	background-image: url(../img/left-quotes-sign.svg);
+	background-size: 30px;
+	background-repeat: no-repeat;
+	color: #666;
+	font-style: italic;
+}
+.choice blockquote footer {
+	color: #666;
+	font-size: 1rem;
+}
+/* End Choice */
