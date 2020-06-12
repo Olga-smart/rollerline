@@ -13,6 +13,9 @@ body {
 	position: relative;
 	min-height: 100vh;
 }
+a[href^="tel:"] {
+	color: inherit;
+}
 section {
 	padding-top: 4rem;
 	padding-bottom: 4rem;
@@ -98,6 +101,21 @@ textarea:focus:-ms-input-placeholder {
 .btn-purple:hover {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
+}
+.breadcrumb {
+	margin-top: 8rem;
+	margin-bottom: 4rem;
+	background-color: transparent;
+	padding-left: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: "→";
+}
+.breadcrumb-item a {
+	color: inherit;
+}
+.breadcrumb-item:hover {
+	color: var(--purple);
 }
 /* End General */
 
@@ -814,50 +832,44 @@ textarea:focus:-ms-input-placeholder {
 }
 /* End Footer */
 
-/* Choice */
-.choice {
+/* Article */
+.article {
 	padding-bottom: 5rem;
 	font-size: 1.3rem;
 }
-.choice .lead {
+.article .lead {
 	font-size: 1.5rem;
 }
-.choice header {
-	background-image: 
-		-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5))),
-		url(../img/article-pic-13.jpg);
-	background-image: 
-		linear-gradient(rgba(0,0,0,0.5)),
-		url(../img/article-pic-13.jpg);
-	background-position: bottom;
-	background-size: cover;background-repeat: no-repeat;
+.article header {
+	background-size: cover;
+	background-repeat: no-repeat;
 	padding-top: 15rem;
 	padding-bottom: 15rem;
-	color: #fff;
+	
 }
-.choice h1 {
+.article h1 {
 	font-size: 3.2rem;
 }
-.choice h2 {
+.article h2 {
 	font-size: 2.4rem;
 	margin-bottom: 3rem;
 }
-.choice h3 {
+.article h3 {
 	margin-top: 4rem;
 	margin-bottom: 2rem;
 }
-.choice ol {
+.article ol {
 	counter-reset: section;   
 	list-style-type: none;
 	padding-left: 0;
 }
-.choice ol li {
+.article ol li {
 	margin-bottom: 2rem;
 	position: relative;
 	padding-left: 35px;
 	padding-left: 40px;
 }
-.choice ol li:before {
+.article ol li:before {
 	counter-increment: section;
 	content: counter(section);
 	position: absolute;
@@ -866,18 +878,18 @@ textarea:focus:-ms-input-placeholder {
 	color: #fff;
 	background-color: var(--dark-purple);
 	border-radius: 50%;
-	font-weight: 800;
+	font-weight: 600;
 	line-height: 30px;
 	left: 0;
 	height: 30px;
 	width: 30px;
 	text-align: center;
 }
-.choice .sidenote {
+.article .sidenote {
 	color: #555;
 	font-family: 'Caveat', cursive;
 }
-.choice blockquote {
+.article blockquote {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	padding-top: 2rem;
@@ -891,8 +903,149 @@ textarea:focus:-ms-input-placeholder {
 	color: #666;
 	font-style: italic;
 }
-.choice blockquote footer {
+.article blockquote footer {
 	color: #666;
 	font-size: 1rem;
 }
-/* End Choice */
+/* End Article */
+
+/* Media Article */
+@media (max-width: 991px) {
+	.acticle h1 {
+		font-size: 3rem;
+	}
+}
+@media (max-width: 767px) {
+	.article h1 {
+		text-align: center;
+	}
+}
+/* End Media Article */
+
+/* Article Choice */
+.choice header {
+	background-position: bottom;
+	background-image: 
+		-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5))),
+		url(../img/article-pic-13.jpg);
+	background-image: 
+		linear-gradient(rgba(0,0,0,0.5)),
+		url(../img/article-pic-13.jpg);
+	color: #fff;
+}
+/* End Article Choice */
+
+/* Media Choice */
+@media (max-width: 1199px) {
+	.choice header {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+	}
+}
+@media (max-width: 991px) {
+	
+}
+/* End Media Choice */
+
+/* Instructor Page */
+.instructor-page h1 {
+	font-size: 1.65rem;
+	font-weight: 600;
+}
+.instructor-page .nickname {
+	color: var(--purple);
+}
+.instructor-page .position {
+	text-transform: uppercase;
+	color: #a3a3a3;
+	font-weight: 500;
+	font-size: 1.13rem;
+}
+.instructor-page .contacts {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 1.5rem;
+	margin-bottom: 3rem;
+}
+.instructor-page .vk {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/vk-blue.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-right: 0.5rem;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+.instructor-page .vk:hover {
+	-webkit-transform: scale(1.05);
+	transform: scale(1.1);
+}
+.instructor-page .tel {
+	font-weight: 600;
+	font-size: 1.06rem;
+	display: inline-block;
+}
+.instructor-page h2 {
+	margin-bottom: 3rem;
+}
+.instructor-page .achievements-item {
+	margin-bottom: 2rem;
+}
+.instructor-page .achievements-item p {
+	margin-bottom: 0.4rem;
+}
+.instructor-page .achievements-item small {
+	color: #666;
+}
+.instructor-page .gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 5vw);
+	grid-gap: 15px;
+}
+.instructor-page .gallery-item {
+	margin-bottom: 0;
+}
+.instructor-page .gallery-img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+.instructor-page .gallery-item-1 {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 5;
+}
+.instructor-page .gallery-item-2 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.instructor-page .gallery-item-3 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 3;
+}
+.instructor-page .gallery-item-4 {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 5;
+}
+.instructor-page .gallery-item-5 {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 3;
+	grid-row-end: 5;
+}
+/* End Instructor Page */
