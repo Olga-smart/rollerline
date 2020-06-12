@@ -114,12 +114,18 @@ textarea:focus:-ms-input-placeholder {
 .breadcrumb-item a {
 	color: inherit;
 }
-.breadcrumb-item:hover {
+.breadcrumb-item a:hover {
 	color: var(--purple);
 }
 /* End General */
 
 /* Media General */
+@media (max-width: 991px) {
+	.breadcrumb {
+		margin-top: 4rem;
+		margin-bottom: 1rem;
+	}
+}
 @media (max-width: 575px) {
 	.section-heading {
 		font-size: 2.5rem; 
@@ -1003,6 +1009,15 @@ textarea:focus:-ms-input-placeholder {
 .instructor-page .achievements-item small {
 	color: #666;
 }
+
+.instructor-page .card-columns .card {
+	margin-bottom: 20px;
+}
+
+.instructor-page .photos img {
+	margin-bottom: 30px;
+}
+/*
 .instructor-page .gallery {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -1048,4 +1063,28 @@ textarea:focus:-ms-input-placeholder {
 	grid-row-start: 3;
 	grid-row-end: 5;
 }
+*/
+.instructor-page .reviews-item:nth-child(even) {
+	background-color: #f5f5f5;
+}
+.instructor-page .reviews-item .avatar {
+	border-radius: 50%;
+}
+.instructor-page .reviews-item .empty-avatar {
+	border-radius: 0;
+	width: 50%;
+}
+.instructor-page .reviews-item .name {
+	font-weight: 500;
+	margin-top: 2rem;
+}
 /* End Instructor Page */
+
+/* Media Instructor Page */
+@media (min-width: 576px) and (max-width: 991px) {
+	.instructor-page .card-columns {
+		-webkit-column-count: 2;
+		column-count: 2;
+	}
+}
+/* End Media Instructor Page */
