@@ -220,6 +220,9 @@ button:focus {
 		padding-top: 3rem;
 		padding-bottom: 3rem;
 	}
+	.navbar .navbar-brand img {
+		width: 150px;
+	}
 }
 /* End Media Navbar */
 
@@ -331,6 +334,9 @@ button:focus {
 @media (max-width: 991px) {
 	.main-screen .navbar {
 		background-color: transparent;
+	}
+	.main-screen .navbar .navbar-brand img {
+		display: none;
 	}
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
@@ -629,7 +635,7 @@ button:focus {
 }
 .instructors-item .students {
 	font-size: 0.9rem;
-	color: 7a7a7a;
+	color: #7a7a7a;
 }
 .instructors-item .btn {
 	padding-top: 0.7rem;
