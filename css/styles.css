@@ -78,6 +78,10 @@ textarea:focus:-ms-input-placeholder {
 .btn:hover {
 	color: #fff;
 }
+.btn:disabled, 
+.btn.disabled {
+		cursor: default;
+}
 .btn-big {
 	padding: 1rem 4.2rem;
 }
@@ -88,7 +92,7 @@ textarea:focus:-ms-input-placeholder {
 	-webkit-box-shadow: 0 16px 32px 0 rgba(146, 0, 179, 0.35);
 	box-shadow: 0 16px 32px 0 rgba(146, 0, 179, 0.35);
 }
-.btn-gradient:hover {
+.btn-gradient:hover:not(:disabled):not(.disabled) {
 	background-position: 0 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -98,7 +102,7 @@ textarea:focus:-ms-input-placeholder {
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.btn-purple:hover {
+.btn-purple:hover:not(:disabled):not(.disabled) {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
 }
@@ -224,6 +228,16 @@ button:focus {
 		width: 150px;
 	}
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+	.navbar-brand img {
+		width: 150px;
+	}
+	.navbar .navbar-nav .nav-link {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 0.9rem;
+	}
+}
 /* End Media Navbar */
 
 /* Main Screen */
@@ -280,7 +294,7 @@ button:focus {
 	background-position: 100% 0;
 	background-size: 200% 200%;
 }
-.main-screen .btn:hover {
+.main-screen .btn:hover:not(:disabled):not(.disabled) {
 	background-position: 0 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
@@ -502,7 +516,7 @@ button:focus {
 
 /* Schedule */
 .schedule-item {
-	font-size: 1.1rem;
+/*	font-size: 1.1rem;*/
 	font-weight: 500;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
@@ -521,7 +535,9 @@ button:focus {
 }
 .schedule-item .start {
 	font-weight: 800;
-	font-size: 1.25rem;
+/*	font-size: 1.25rem;*/
+	display: inline-block;
+	width: 145px;
 }
 .schedule-item .day {
 	display: inline-block;
