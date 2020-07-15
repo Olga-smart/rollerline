@@ -1179,10 +1179,39 @@ button:focus {
 */
 .knowledge-base h2 {
 	text-align: center;
+	font-size: 1.75rem;
+	margin-bottom: 0;
+}
+.knowledge-base .show-all {
+	display: block;
+	text-align: center;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
 }
 .knowledge-base .video-link {
 	display: block;
 	margin-bottom: 3rem;
+}
+.knowledge-base .video-cover-container {
+	position: relative;
+}
+.knowledge-base .video-duration {
+	display: block;
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.1rem 0.5rem;
+}
+.knowledge-base .video-name {
+	font-size: 0.9rem;
+	color: #212529;
+	text-decoration: none;
+	position: absolute;
+}
+.knowledge-base .video-link:hover {
+	text-decoration: none;
 }
 .knowledge-base .owl-prev, 
 .knowledge-base .owl-next {
