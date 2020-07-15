@@ -1116,67 +1116,6 @@ button:focus {
 	margin-top: 5rem;
 	margin-bottom: 1rem;
 }
-/*
-.knowledge-base .show-all {
-	display: block;
-	margin-left: 1rem;
-	color: var(--purple);
-	font-weight: 500;
-	position: relative;
-	text-decoration: none;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-.knowledge-base .show-all:after {
-	content: "→";
-	margin-left: 0.5rem;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-.knowledge-base .show-all:hover {
-	color: var(--pink);
-}
-.knowledge-base .show-all:hover:after {
-	margin-left: 1rem;
-	color: var(--pink);
-}
-.knowledge-base .owl-carousel p,
-.knowledge-base .title {
-	margin-top: 0.5rem;
-	font-weight: 500;
-} 
-.knowledge-base .owl-prev, 
-.knowledge-base .owl-next {
-	position: absolute;
-	top: 0;
-	width: 40px;
-	height: 100%;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-}
-.knowledge-base .owl-prev img, 
-.knowledge-base .owl-next img {
-	position: relative;
-	top: -40px;
-	-webkit-transition: all 0.2s ease-in-out;
-	transition: all 0.2s ease-in-out;
-}
-.knowledge-base .owl-prev {
-    left: -45px;
-}
-.knowledge-base .owl-next {
-    right: -45px;
-}
-.knowledge-base .owl-prev:hover img,
-.knowledge-base .owl-next:hover img {
-	-webkit-transform: scale(1.2);
-	transform: scale(1.2);
-}
-*/
 .knowledge-base h2 {
 	text-align: center;
 	font-size: 1.75rem;
@@ -1242,16 +1181,25 @@ button:focus {
 .knowledge-base .owl-next.disabled img {
 	opacity: 0.3;
 }
-.knowledge-base .owl-prev:not(.disabled):hover, 
-.knowledge-base .owl-next:not(.disabled):hover {
-	width: 50px;
-}
 /* End Knowledge Base */
 
 /* Media Knowledge Base */
-@media (max-width: 575px) {
-	.knowledge-base .show-all {
-		margin-left: 0;
+@media (max-width: 767px) {
+	.knowledge-base .owl-prev, 
+	.knowledge-base .owl-next {
+		width: 35px;
+		height: 100px;
+		top: calc(50vh - 50px);
+	}
+	.knowledge-base .owl-prev img, 
+	.knowledge-base .owl-next img {
+		width: 20px;
+	}
+}
+@media (min-width: 768px) {
+	.knowledge-base .owl-prev:not(.disabled):hover, 
+	.knowledge-base .owl-next:not(.disabled):hover {
+		width: 50px;
 	}
 }
 /* End Media Knowledge Base */
