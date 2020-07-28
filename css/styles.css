@@ -1044,18 +1044,25 @@ button:focus {
 	margin-top: 1.5rem;
 	margin-bottom: 3rem;
 }
-.instructor-page .vk {
+.instructor-page .vk,
+.instructor-page .insta {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background-image: url(../img/vk-blue.png);
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 0.5rem;
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 }
-.instructor-page .vk:hover {
+.instructor-page .vk {
+	background-image: url(../img/vk-blue.png);
+}
+.instructor-page .insta {
+	background-image: url(../img/insta-colored.svg);
+}
+.instructor-page .vk:hover,
+.instructor-page .insta:hover {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.1);
 }
@@ -1095,6 +1102,11 @@ button:focus {
 .instructor-page .reviews-item .name {
 	font-weight: 500;
 	margin-top: 2rem;
+}
+.instructor-page .reviews-item .vk {
+	width: 25px;
+	height: 25px;
+	margin-top: 0.5rem;
 }
 /* End Instructor Page */
 
