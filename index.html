@@ -21,6 +21,43 @@
 		<title>Роллерлайн</title>
 	</head>
 	<body id="page-top">
+	
+		<div class="modal fade enroll-modal" id="enrollModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<p class="modal-title">Запись на занятия</p>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<input type="text" class="form-control" placeholder="Имя" required>
+							<input type="tel" class="form-control" placeholder="Телефон" required>
+							<textarea class="form-control" rows="3" placeholder="Комментарий"></textarea>
+							<button type="submit" class="btn btn-purple" data-toggle="modal" data-target="#confirmModal" data-dismiss="modal">Записаться</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade confirm-modal" id="confirmModal" tabindex="-1" role="dialog">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p class="text-center">Спасибо за заявку!<br>Скоро мы вам перезвоним</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	
 		<header class="main-screen">
 			<nav class="navbar navbar-expand-lg fixed-top" data-aos="slide-down" data-aos-delay="400">
 				<a class="navbar-brand" href="index.html">
@@ -68,10 +105,10 @@
 						<form>
 							<div class="row">
 								<div class="col-md-4">
-									<input type="tel" class="form-control" placeholder="Телефон">
+									<input type="tel" class="form-control" placeholder="Телефон" required>
 								</div>
 								<div class="col-md-4">
-									<input type="text" class="form-control" placeholder="Имя">
+									<input type="text" class="form-control" placeholder="Имя" required>
 								</div>
 								<div class="col-md-4">
 									<button type="submit" class="btn">Отправить заявку</button>
@@ -134,7 +171,8 @@
 						<p>Есть группы для начинающих и для продвинутых.</p>
 						<p>Если вы предупредите нас, что не придете, за сутки, занятие не сгорит и его можно будет отходить позже.</p>
 						<p>Если у вас нет роликов, мы подарим вам скидку 15% на их покупку и расскажем, как сделать правильный выбор.</p>
-						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>
+<!--						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>-->
+						<button type="button" class="btn btn-big btn-gradient" data-toggle="modal" data-target="#enrollModal">Хочу записаться!</button>
 					</div>
 				</div>
 			</div>	
@@ -157,7 +195,8 @@
 						<p>Дети от 3-х до 9 лет (дети старше 9 лет успешно обучаются со взрослыми).</p>
 						<p>Занятие идет 90 минут; в группе от 4 до 9 детей. Если вы предупредите нас о том, что не придете, за сутки, занятие не сгорит и его можно будет отходить позже.</p>
 						<p>Если у вас нет роликов, мы подарим вам скидку 15% на их покупку, а также поможем с выбором.</p>
-						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>
+<!--						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>-->
+					<button type="button" class="btn btn-big btn-gradient" data-toggle="modal" data-target="#enrollModal">Хочу записаться!</button>
 					</div>
 					<div class="order-1 order-md-2 col-6 offset-3 col-md-5 offset-md-0 col-lg-6 col-xl-5 offset-xl-2">
 						<img src="img/children.png" class="img-fluid mb-3 mb-md-0" alt="Дети на роликах">
@@ -207,7 +246,8 @@
 								<td>3 300 ₽</td>
 							</tr>
 						</table>
-						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>
+<!--						<a class="btn btn-big btn-gradient" href="#enroll">Хочу записаться!</a>-->
+						<button type="button" class="btn btn-big btn-gradient" data-toggle="modal" data-target="#enrollModal">Хочу записаться!</button>
 					</div>
 				</div>
 			</div>	
@@ -245,7 +285,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="48.html">Полина</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Дети начинающие (4-9 лет) 472 Дети нач весна C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -275,7 +315,8 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="454.html">Иван</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Дети продолжающие (4-9 лет) 473 Дети про весна C 20 июня';">Записаться</a>
+<!--								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Дети продолжающие (4-9 лет) 473 Дети про весна C 20 июня';">Записаться</a>-->
+							<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -298,7 +339,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="188.html">Валентина</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Дети продолжающие (4-9 лет) 478 Дети про весна C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>				
@@ -328,7 +369,8 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="454.html">Иван</a>  <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые начинающие (10 и старше) 479 Нач Выхи Лето C 20 июня';">Записаться</a>
+<!--								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые начинающие (10 и старше) 479 Нач Выхи Лето C 20 июня';">Записаться</a>-->
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -351,7 +393,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="469.html">Наталия</a> 
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые начинающие (10 и старше) 480 Нач июнь C 22 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -381,7 +423,7 @@
 								<a href="https://www.instagram.com/p/B-Wwk3dJi7z/">Обучение онлайн</a>, <a href="552.html">Эвелина</a>  <small>(прошло 6 занятий)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 461 Продолжахи со всего мира C 18 мая';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -404,7 +446,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="672.html">Сергей Ф.</a> <small>(прошло 5 занятий)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 467 Прод июнь C 09 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -427,7 +469,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="552.html">Эвелина</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 471 Нач лето C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -450,7 +492,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="552.html">Эвелина</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 471 Нач лето C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -473,7 +515,8 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="204.html">Феанор</a> <small>(прошло 2 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 476 Прод выхи июнь C 20 июня';">Записаться</a>
+<!--								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 476 Прод выхи июнь C 20 июня';">Записаться</a>-->
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -496,7 +539,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="672.html">Сергей Ф.</a> 
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Взрослые продолжающие (10 и старше) 481 Прод ср-пт C 24 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>				
@@ -526,7 +569,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="734.html">Сергей Тимченко</a> 
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Слалом Слалом нач июнь C 27 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>				
@@ -556,7 +599,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="734.html">Сергей Тимченко</a>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Продвинутый слалом Слалом про июнь C 27 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 							</div>
 					</div>
@@ -586,7 +629,8 @@
 								<a href="https://www.instagram.com/p/B-Wwk3dJi7z/">Обучение онлайн</a>, <a href="204.html">Феанор</a> <small>(прошло 4 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Фрискейт 464 Фрискейт июнь C 02 июня';">Записаться</a>
+<!--								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Фрискейт 464 Фрискейт июнь C 02 июня';">Записаться</a>-->
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 						<div class="row py-4">
@@ -609,7 +653,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="204.html">Феанор</a> <small>(прошло 2 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Фрискейт 470 Фрискейт июнь C 17 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -639,7 +683,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="204.html">Феанор</a> <small>(прошло 2 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Прыжки 475 Прыжки весна C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -669,7 +713,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="2.html">Александр</a> <small>(прошло 1 занятие)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Слайды 474 Слайды весна C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>	
@@ -699,7 +743,7 @@
 								<a href="204.html">Феанор</a> <small>(прошло 8 занятий)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Скейтпарк 469 Скейтпарк июнь C 16 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -729,7 +773,7 @@
 								<a href="http://maps.yandex.ru/?um=r-vn1I5IJlhAhyNrP5AMDgdes9GAdg3m&l=map">Парк Горького</a>, <a href="672.html">Сергей Ф.</a> <small>(прошло 2 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Спидскейтинг 477 Спидскейтинг C 20 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -760,7 +804,7 @@
 								<a href="https://www.instagram.com/p/B-Wwk3dJi7z/">Обучение онлайн</a>, <a href="672.html">Сергей Ф.</a> <small>(прошло 2 занятия)</small>
 							</div>
 							<div class="order-5 order-sm-3 order-md-4 order-xl-5 col mt-3 mt-sm-0 text-sm-right">
-								<a class="btn btn-purple" href="#enroll" onclick="document.getElementById('nindiv_bottom').value='0';document.getElementById('comments_bottom').value='Воркаут (ОФП и СФП) 468 ОФП июнь НОВОЕ C 13 июня';">Записаться</a>
+								<button type="button" class="btn btn-purple" data-toggle="modal" data-target="#enrollModal">Записаться</button>
 							</div>
 						</div>
 					</div>
@@ -1263,6 +1307,56 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-lg-6">
+						<div class="instructors-item" data-aos="fade">
+							<div class="row">
+								<div class="col-5 col-sm-4 col-lg-5">
+									<img src="img/instructor20.jpg" class="img-fluid" alt="Анна Голлербах">
+								</div>
+								<div class="col-7 offset-sm-1 offset-lg-0 col-lg-7">
+									<h4>Анна Голлербах</h4>
+									<p class="students">Взрослые, дети-спортсмены от 6 лет</p>
+									<p>Инструктор по базовым навыкам и радостному катанию слалома без суровой спортивной составляющей.</p>			
+								</div>
+							</div>
+							<div class="row align-items-end">
+								<div class="col-sm-5">
+									<div class="contacts">
+										<a href="https://vk.com/antr0" class="vk"></a>
+										<a class="tel" href="tel:+79111323203">+7 (911) 132-32-03</a>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<a class="btn btn-block btn-lg btn-purple" href="gollerbah.html">Почитайте про Анну →</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-6">
+						<div class="instructors-item" data-aos="fade">
+							<div class="row">
+								<div class="col-5 col-sm-4 col-lg-5">
+									<img src="img/instructor21.jpg" class="img-fluid" alt="Никита Кухарь">
+								</div>
+								<div class="col-7 offset-sm-1 offset-lg-0 col-lg-7">
+									<h4>Никита Кухарь</h4>
+									<p class="students">Взрослые, дети-спортсмены от 6 лет</p>
+									<p>Помогает другим научиться кататься легко, уверенно и красиво.</p>			
+								</div>
+							</div>
+							<div class="row align-items-end">
+								<div class="col-sm-5">
+									<div class="contacts">
+										<a class="tel" href="tel:+79055894446">+7 905 589-44-46</a>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<a class="btn btn-block btn-lg btn-purple" href="kuhar.html">Почитайте про Никиту →</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -1316,8 +1410,8 @@
 					</div>
 					<div class="offset-sm-0 col-sm-6 col-lg-5 offset-lg-1">
 						<form>
-							<input type="text" class="form-control" placeholder="Имя">
-							<input type="tel" class="form-control" placeholder="Телефон">
+							<input type="text" class="form-control" placeholder="Имя" required>
+							<input type="tel" class="form-control" placeholder="Телефон" required>
 							<button type="submit" class="btn btn-big btn-gradient">Записаться</button>
 						</form>
 					</div>
