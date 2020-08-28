@@ -661,6 +661,9 @@ button:focus {
 	margin-bottom: 3rem;
 	width: 100%;
 }
+.instructors-item .embed-responsive {
+	margin-bottom: 3rem;
+}
 .instructors-item .contacts {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -724,7 +727,8 @@ button:focus {
 	}
 }
 @media (max-width: 991px) {
-	.instructors-item img {
+	.instructors-item img,
+	.instructors-item .embed-responsive {
 		margin-bottom: 1rem;
 	} 
 }
