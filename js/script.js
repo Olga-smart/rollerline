@@ -28,15 +28,6 @@ window.addEventListener('click', function(event) {
 });
 
 // Autoplay video in instructors cards
-//video = document.getElementById("shamblerVideo");
-//video.addEventListener('mouseover', function() {
-//	this.play();
-//});
-//video.addEventListener('mouseleave', function() {
-//	this.pause();
-//});
-
-// Autoplay video in instructors cards
 instructors.addEventListener('mouseover', function(event) {
 	let video = event.target.closest('video');
 	if (!video) return;
