@@ -31,7 +31,9 @@ window.addEventListener('click', function(event) {
 instructors.addEventListener('mouseover', function(event) {
 	let video = event.target.closest('video');
 	if (!video) return;
-	video.play();
+	if (video.readyState) {
+		video.play();
+	}	
 });
 
 instructors.addEventListener('mouseleave', function(event) {
@@ -39,3 +41,21 @@ instructors.addEventListener('mouseleave', function(event) {
 	if (!video) return;
 	video.pause();
 });
+
+// Autoplay video in instructors cards
+instructors.addEventListener('mouseover', function(event) {
+	let photo = event.target.closest('.instructor-photo');
+	if (!photo) return;
+	photo.dataset.img = photo.src;
+	photo.src = photo.dataset.gif;
+	
+	photo.addEventListener('mouseleave', function(event) {
+		photo.src = photo.dataset.img;
+	});
+});
+
+//instructors.addEventListener('mouseleave', function(event) {
+//	let photo = event.target.closest('.instructor-photo');
+//	if (!photo) return;
+//	photo.src = photo.dataset.img;
+//});
