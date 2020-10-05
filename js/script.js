@@ -29,22 +29,7 @@ window.addEventListener('click', function(event) {
 
 // Autoplay video in instructors cards
 instructors.addEventListener('mouseover', function(event) {
-	let video = event.target.closest('video');
-	if (!video) return;
-	if (video.readyState) {
-		video.play();
-	}	
-});
-
-instructors.addEventListener('mouseleave', function(event) {
-	let video = event.target.closest('video');
-	if (!video) return;
-	video.pause();
-});
-
-// Autoplay video in instructors cards
-instructors.addEventListener('mouseover', function(event) {
-	let photo = event.target.closest('.instructor-photo');
+	let photo = event.target.closest('.instructor-photo[data-gif]');
 	if (!photo) return;
 	photo.dataset.img = photo.src;
 	photo.src = photo.dataset.gif;
@@ -53,9 +38,3 @@ instructors.addEventListener('mouseover', function(event) {
 		photo.src = photo.dataset.img;
 	});
 });
-
-//instructors.addEventListener('mouseleave', function(event) {
-//	let photo = event.target.closest('.instructor-photo');
-//	if (!photo) return;
-//	photo.src = photo.dataset.img;
-//});
