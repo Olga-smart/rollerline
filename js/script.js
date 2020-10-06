@@ -61,7 +61,9 @@ instructors.addEventListener('mouseout', function(event) {
 		if (relatedTarget == currentCard) return;
 		relatedTarget = relatedTarget.parentNode;
 	}
-	let photo = currentCard.querySelector('.instructor-photo[data-gif]');
+	let instructorCard = event.target.closest('.instructors-item');
+	if (!instructorCard) return;
+	let photo = instructorCard.querySelector('.instructor-photo[data-gif]');
 	if (!photo) return;
 	photo.src = photo.dataset.img;
 	currentCard = null;
