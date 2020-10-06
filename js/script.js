@@ -28,13 +28,39 @@ window.addEventListener('click', function(event) {
 });
 
 // Autoplay video in instructors cards
+//instructors.addEventListener('mouseover', function(event) {
+//	let photo = event.target.closest('.instructor-photo[data-gif]');
+//	if (!photo) return;
+//	photo.dataset.img = photo.src;
+//	photo.src = photo.dataset.gif;
+//	
+//	photo.addEventListener('mouseleave', function(event) {
+//		photo.src = photo.dataset.img;
+//	});
+//});
+
+let currentCard = null;
 instructors.addEventListener('mouseover', function(event) {
-	let photo = event.target.closest('.instructor-photo[data-gif]');
-	if (!photo) return;
+	if (currentCard) return;
+	let instructorCard = event.target.closest('.instructors-item');
+	if (!instructorCard) return;
+	currentCard = instructorCard;
+	let photo = instructorCard.querySelector('.instructor-photo[data-gif]');
 	photo.dataset.img = photo.src;
 	photo.src = photo.dataset.gif;
 	
-	photo.addEventListener('mouseleave', function(event) {
-		photo.src = photo.dataset.img;
-	});
+//	photo.addEventListener('mouseout', function(event) {
+//		photo.src = photo.dataset.img;
+//	});
 });
+instructors.addEventListener('mouseout', function(event) {
+	if (!currentCard) return;
+	let relatedTarget = event.relatedTarget;
+	while (relatedTarget) {
+		if (relatedTarget == currentCard) return;
+		relatedTarget = relatedTarget.parentNode;
+	}
+	let photo = currentCard.querySelector('.instructor-photo[data-gif]');
+	photo.src = photo.dataset.img;
+	currentCard = null;
+}); 
