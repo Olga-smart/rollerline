@@ -46,6 +46,7 @@ instructors.addEventListener('mouseover', function(event) {
 	if (!instructorCard) return;
 	currentCard = instructorCard;
 	let photo = instructorCard.querySelector('.instructor-photo[data-gif]');
+	if (!photo) return;
 	photo.dataset.img = photo.src;
 	photo.src = photo.dataset.gif;
 	
@@ -61,6 +62,7 @@ instructors.addEventListener('mouseout', function(event) {
 		relatedTarget = relatedTarget.parentNode;
 	}
 	let photo = currentCard.querySelector('.instructor-photo[data-gif]');
+	if (!photo) return;
 	photo.src = photo.dataset.img;
 	currentCard = null;
 }); 
