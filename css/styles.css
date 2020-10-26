@@ -663,6 +663,7 @@ button:focus {
 }
 .instructors-item .embed-responsive {
 	margin-bottom: 3rem;
+	border-radius: 50%;
 }
 .instructors-item .contacts {
 	display: -webkit-box;
@@ -672,16 +673,23 @@ button:focus {
 	-ms-flex-align: center;
 	align-items: center;
 }
-.instructors-item .vk {
+.instructors-item .vk,
+.instructors-item .insta {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
-	background-image: url(../img/vk-blue.png);
+	
 	background-size: contain;
 	background-repeat: no-repeat;
 	margin-right: 0.5rem;
 	-webkit-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+}
+.instructors-item .vk {
+   background-image: url(../img/vk-blue.png);
+}
+.instructors-item .insta {
+   background-image: url(../img/insta-colored.svg);
 }
 .instructors-item .vk:hover {
 	-webkit-transform: scale(1.05);
