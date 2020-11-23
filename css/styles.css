@@ -290,7 +290,7 @@ button:focus {
 	background-image: linear-gradient(to bottom, #c002cb 20%, var(--purple));
 	background-repeat: no-repeat;
 	background-size: 100%;
-	background-position: bottom, top;
+	background-position: bottom, bottom 5px;
 	padding-top: 150px;
 	padding-bottom: 200px;
 	color: #fff;
@@ -691,7 +691,8 @@ button:focus {
 .instructors-item .insta {
    background-image: url(../img/insta-colored.svg);
 }
-.instructors-item .vk:hover {
+.instructors-item .vk:hover,
+.instructors-item .insta:hover {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.1);
 }
