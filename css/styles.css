@@ -1021,6 +1021,23 @@ button:focus {
 }
 /* End Article Choice */
 
+/* Article Drom */
+.drom header {
+  background-image: 
+    -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5))),
+    url(../img/drom-cover.jpg);
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.5)),
+    url(../img/drom-cover.jpg);
+  background-position: bottom right;
+  color: #fff;
+}
+.drom .map h2 {
+  font-size: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+/* End Article Drom */
+
 /* Media Choice */
 @media (max-width: 1199px) {
 	.choice header {
