@@ -487,14 +487,15 @@ button:focus {
 /* Social */
 .social-item {
 	display: block;
-	padding-left: 80px;
-	background-position: left center;
+	padding-top: 80px;
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: 50px;
 	line-height: 50px;
 	font-weight: 600;
 	font-size: 1.2rem;
 	color: inherit;
+	text-align: center;
 }
 .social-item:hover {
 	text-decoration: none;
@@ -512,6 +513,9 @@ button:focus {
 .social-item-tg {
 	background-image: url(../img/tg.png);
 }
+.social-item-tt {
+	background-image: url(../img/tiktok.svg);
+}
 /* End Social */
 
 /* Media Social */
@@ -519,13 +523,17 @@ button:focus {
 	.social-item {
 		background-size: 40px;
 		line-height: 40px;
-		padding-left: 50px;
+		padding-top: 50px;
 	}
 }
 @media (max-width: 991px) {
 	.social-item {
 		margin-bottom: 3rem;
-		padding-left: 60px;
+	}
+}
+@media (max-width: 991px) {
+	.social-item span {
+		display: none;
 	}
 }
 @media (max-width: 575px) {
@@ -1042,18 +1050,7 @@ button:focus {
   font-size: 1.75rem;
   margin-bottom: 2.5rem;
 }
-.drom .price table td:nth-child(2) {
-  min-width: 85px;
-}
 /* End Article Drom */
-
-/* Media Article Drom */
-@media (max-width: 600px) {
-  .drom .price table {
-    font-size: 1rem;
-  }
-}
-/* End Media Article Drom */
 
 /* Media Choice */
 @media (max-width: 1199px) {
@@ -1061,6 +1058,9 @@ button:focus {
 		padding-top: 10rem;
 		padding-bottom: 10rem;
 	}
+}
+@media (max-width: 991px) {
+	
 }
 /* End Media Choice */
 
